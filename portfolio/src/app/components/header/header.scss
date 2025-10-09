@@ -1,0 +1,58 @@
+.navbar {
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  
+  &.scrolled {
+    background: rgba(31, 41, 55, 0.9) !important;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white !important;
+}
+
+.gradient-text {
+  background: linear-gradient(45deg, #ffffff 0%, #cccccc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+.nav-link {
+  color: white !important;
+  font-weight: 500;
+  margin: 0 10px;
+  position: relative;
+  transition: all 0.3s ease;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gradient-primary);
+    transition: width 0.3s ease;
+  }
+
+  &:hover {
+    color: var(--primary-color) !important;
+    
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
+.navbar-toggler {
+  border: none;
+  
+  &:focus {
+    box-shadow: none;
+  }
+}
