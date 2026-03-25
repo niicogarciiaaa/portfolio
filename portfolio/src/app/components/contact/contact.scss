@@ -3,6 +3,14 @@
   color: white;
   min-height: 100vh;
   position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .contact-info {
@@ -160,6 +168,8 @@ textarea.form-control {
 .footer {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   background: rgba(0, 0, 0, 0.2);
+  margin-top: auto;
+  padding: 1.5rem 0;
 }
 
 .footer-content {

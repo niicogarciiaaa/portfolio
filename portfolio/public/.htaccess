@@ -1,0 +1,43 @@
+# Configuración CORS para desarrollo Angular
+# Habilitar mod_rewrite
+RewriteEngine On
+
+# Configuración de cabeceras CORS
+<IfModule mod_headers.c>
+    # Permitir acceso desde tu dominio específico y localhost para desarrollo
+    Header always set Access-Control-Allow-Origin "https://niicogarcia.page.gd"
+    
+    # Métodos HTTP permitidos
+    Header always set Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS, PATCH"
+    
+    # Cabeceras permitidas
+    Header always set Access-Control-Allow-Headers "Origin, X-Requested-With, Content-Type, Accept, Authorization, Cache-Control, Pragma, Expires"
+    
+    # Permitir credenciales
+    Header always set Access-Control-Allow-Credentials "true"
+    
+    # Tiempo de vida del preflight
+    Header always set Access-Control-Max-Age "3600"
+</IfModule>
+
+# Manejo de solicitudes OPTIONS (preflight)
+RewriteCond %{REQUEST_METHOD} OPTIONS
+RewriteRule ^(.*)$ $1 [R=200,L]
+
+# Configuración para SPA (Single Page Application)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^.*$ /index.html [L]
+
+# Configuración de tipos MIME
+<IfModule mod_mime.c>
+    AddType application/javascript .js
+    AddType text/css .css
+    AddType image/x-icon .ico
+    AddType image/png .png
+    AddType image/jpeg .jpg
+    AddType image/jpeg .jpeg
+    AddType image/gif .gif
+    AddType image/svg+xml .svg
+    AddType application/pdf .pdf
+</IfModule>

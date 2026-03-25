@@ -9,6 +9,14 @@
       <div class="shape shape-6"></div>
       <div class="shape shape-7"></div>
     </div>
+    
+    <!-- Partículas animadas -->
+    <div class="animated-particles">
+      <div class="particle" 
+           *ngFor="let particle of particles; let i = index"
+           [ngStyle]="getParticleStyle(i)">
+      </div>
+    </div>
   </div>
   
   <div class="container">
@@ -18,7 +26,9 @@
           <h1 class="hero-title">
             Hola, soy <span class="gradient-text">Nicolás García Moreira</span>
           </h1>
-          <h2 class="hero-subtitle">Desarrollador Full Stack</h2>
+          <h2 class="hero-subtitle typewriter">
+            {{ displayText }}<span class="cursor">|</span>
+          </h2>
           <p class="hero-description">
             Creo experiencias digitales increíbles con código limpio y diseño moderno. 
             Especializado en tecnologías web modernas y soluciones innovadoras.
@@ -37,7 +47,7 @@
       <div class="col-lg-6 order-1 order-lg-2">
         <div class="hero-image" data-aos="fade-left">
           <div class="image-container">
-            <img src="../assets/images/profile/nicolas_garcia_moreira.jpg"
+            <img src="assets/images/profile/nicolas_garcia_moreira.jpg"
                  alt="Nicolás García Moreira" 
                  class="profile-image animate-pulse">
             <div class="image-overlay"></div>

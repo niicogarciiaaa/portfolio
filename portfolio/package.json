@@ -5,7 +5,6 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:github-pages": "ng build --configuration github-pages",
     "build:gh-pages": "ng build --base-href=/portfolio/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
