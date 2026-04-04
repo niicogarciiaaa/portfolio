@@ -18,7 +18,7 @@
   --gray-400: #999999;
   --gradient-primary: linear-gradient(135deg, #141414 0%, #575656 100%);
   --gradient-secondary: linear-gradient(135deg, #333333 0%, #000000 100%);
-  --gradient-accent: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
+  --gradient-accent: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
 }
 
 // Reset y estilos base
@@ -43,7 +43,7 @@ body {
 
 // Utilidades
 .gradient-text {
-  background: linear-gradient(135deg, #000000 0%, #333333 100%);
+  background: linear-gradient(135deg, #00c6ff 0%, #0072ff 50%, #7c3aed 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
